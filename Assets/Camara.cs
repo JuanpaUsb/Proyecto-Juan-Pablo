@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class Camara : MonoBehaviour
 {
-
+    // Start is called before the first frame update
     public Transform Cube;
     public Vector3 offset;
-    // Start is called before the first frame update
     void Start()
     {
         offset=Cube.position-transform.position;
-
-       
     }
 
     // Update is called once per frame
-    void Update()
-
+    void LateUpdate()
     {
-        if(Cube != null){
-            transform.position=Cube.position-offset;
-        }
-
-       
-       
+         if(Cube != null){
+            transform.position=Cube.position - offset;
+         }
     }
-    }
+}
