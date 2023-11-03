@@ -5858,7 +5858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ff4405aea601e4185ee64e9d4923ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
 --- !u!1 &436557607
 GameObject:
   m_ObjectHideFlags: 0
@@ -14514,6 +14513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidadPuntos: 100
   puntaje: {fileID: 1991709093}
+  audioSource: {fileID: 1748165632}
 --- !u!1 &1194845719
 GameObject:
   m_ObjectHideFlags: 0
@@ -15718,7 +15718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf7c61b272cfb34b873281673d690cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  currentHealth: 0
+  maxHealth: 10
 --- !u!82 &1296440052
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20388,6 +20389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidadPuntos: 100
   puntaje: {fileID: 1991709093}
+  audioSource: {fileID: 1748165632}
 --- !u!1 &1589519912
 GameObject:
   m_ObjectHideFlags: 0
@@ -22366,6 +22368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1748165631}
+  - component: {fileID: 1748165632}
   m_Layer: 0
   m_Name: Sonidos
   m_TagString: Untagged
@@ -22388,6 +22391,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1748165632
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748165630}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 90afc801f09c4164793a815aa361a1e1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1748177243
 GameObject:
   m_ObjectHideFlags: 0
@@ -23809,6 +23908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidadPuntos: 100
   puntaje: {fileID: 1991709093}
+  audioSource: {fileID: 1748165632}
 --- !u!1 &1841587968
 GameObject:
   m_ObjectHideFlags: 0
@@ -23942,6 +24042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidadPuntos: 100
   puntaje: {fileID: 1991709093}
+  audioSource: {fileID: 1748165632}
 --- !u!1 &1844141205
 GameObject:
   m_ObjectHideFlags: 0
@@ -27030,6 +27131,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 330585546}
+  - {fileID: 1748165631}
   - {fileID: 410087041}
   - {fileID: 1144447968}
   - {fileID: 36451082}
@@ -27048,4 +27150,3 @@ SceneRoots:
   - {fileID: 1586628095}
   - {fileID: 1841587969}
   - {fileID: 1830656295}
-  - {fileID: 1748165631}
