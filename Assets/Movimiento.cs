@@ -11,13 +11,18 @@ public class Movimiento : MonoBehaviour
     public float playerSpeed = 2.0f;
     public float jumpHeight = 1.0f;
     public float gravityValue = -9.81f;
+     public static bool growup;
+    public Animator animator;
     
     private AudioSource SonidosDeSalto;
+    private AudioSource SonidosDeMuerte;
 
      void Start()
     {
         controller = this.GetComponent<CharacterController>();
         SonidosDeSalto = GetComponent<AudioSource>();
+        SonidosDeMuerte= GetComponent<AudioSource>();
+         growup = false;
     }
 
     void Update()
@@ -30,8 +35,9 @@ public class Movimiento : MonoBehaviour
             velocidadcaidarapida = 1;
         }
 
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
+
 
         if (move != Vector3.zero)
         {
@@ -54,6 +60,10 @@ public class Movimiento : MonoBehaviour
         playerVelocity.y += gravityValue * velocidadcaidarapida * Time.deltaTime;
         //playerVelocity.y=(velocidadcaidarapida*gravityValue);
         controller.Move(playerVelocity * Time.deltaTime);
+        if(growup)
+        {
+            animator.SetBool("Growup",growup);
+        }
     }
 }
  
